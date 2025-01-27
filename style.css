@@ -1,0 +1,136 @@
+:root {
+    --primary: #0070f3;
+    --primary-foreground: #ffffff;
+    --secondary: #f5f5f5;
+    --secondary-foreground: #111111;
+    --accent: #f0f0f0;
+    --accent-foreground: #111111;
+    --background: #ffffff;
+    --foreground: #111111;
+    --card: #ffffff;
+    --card-foreground: #111111;
+    --popover: #ffffff;
+    --popover-foreground: #111111;
+    --muted: #f5f5f5;
+    --muted-foreground: #666666;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #0070f3;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.accordion-item {
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.accordion-button {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 2px var(--ring);
+}
+
+.product-image {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.02);
+}
+
+.list-group-item {
+    border-color: var(--border);
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: var(--accent);
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.table {
+    color: var(--foreground);
+}
+
+.table th {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.product-image {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+@media print {
+    .accordion-collapse {
+        display: block !important;
+    }
+
+    .accordion-button {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .accordion-body {
+        padding: 1rem;
+    }
+
+    .card-group {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
